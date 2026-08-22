@@ -6,3 +6,6 @@
 
 # logs folder
 logs/
+
+# bkp files
+*.bkp
