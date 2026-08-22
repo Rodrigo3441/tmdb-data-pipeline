@@ -1,7 +1,7 @@
 from database import connection
 from src.movies.bronze import extract
 from src.movies.bronze import transform
-from src.movies.bronze import load
+from src import load
 import logging
 import time
 
@@ -28,11 +28,10 @@ def run():
 
         raw_data = extract.run(page)
         cleaned_data = transform.run(raw_data)
-        print(page)
         
         data_was_loaded = load.execute(engine, cleaned_data, 'bronze')
 
-        if (data_was_loaded):
+        if data_was_loaded:
             pages_loaded += 1
             logger.info(f'Loaded page {page} into the database successfully.')
         else:
