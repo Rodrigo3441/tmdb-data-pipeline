@@ -1,0 +1,7 @@
+- [x] Finish the silver layer for movies
+- [x] Build bronze layer for genres
+- [x] Build silver layer for genres
+- [] Build gold Layer
+- [] Implement tests
+- [] Documentation
+- [] Error handling
